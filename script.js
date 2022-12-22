@@ -60,19 +60,19 @@ navLogo.addEventListener('click', hideMobileMenu)
 // =======================================================================================================================================
 // Goals
 let goals = [{
-    name: 'Mortage',
+    name: 'Loans',
     account: 'Savings',
     goaldate: '2021-10-04',
     id: '1'},
     {name: 'Loans',
-    account: 'Chequeing',
+    account: 'Savings',
     goaldate: '2021-10-04',
     id: '2'},
     {name: 'Laptop',
     account: 'Savings',
     goaldate: '2021-10-04',
     id: '3'},
-    {name: 'Grocery',
+    {name: 'Loans',
     account: 'Savings',
     goaldate: '2021-10-04',
     id: '4'}]
@@ -124,8 +124,15 @@ function goalRender(){
 
     goals.forEach(goal => {
         const element = document.createElement('div')
+        element.innerHTML = `
+        <ul class = "row">
+            <li class = "col"> ${goal.name}</li>
+            <li class = "col"> ${goal.account}</li>
+            <li class = "col"> ${goal.goaldate}</li>
+        </ul>`
 
-        element.innerText = goal.name + '  ----  ' + goal.account +'  ------  ' + goal.goaldate
+
+        // element.innerText = goal.name + '  ----  ' + goal.account +'  ------  ' + goal.goaldate
 
         // add delete button for each element
         const deleteButton = document.createElement('button')
