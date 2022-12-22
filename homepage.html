@@ -52,10 +52,6 @@
      <div class="main" id="overview">
         <div class="main_container">
             <div class="main_content">
-                <h1>Interested? </h1>
-                <h2>Download my CV to know more</h2>
-                <p>See more</p>
-                <button class="main_btn"><a href="#">Download CV</a></button>
             </div>
             <div class="main_img-container">
                 <div class="main_img-card" id="card-2"><i class="fas fa-users"></i></div>
@@ -65,89 +61,81 @@
 
     <!-- Goals -->
     <div class="goal" id="goals">
-        <div class="main_container">
-            <div class="main_content">
-                <h1>Goals? </h1>
-                <h2>Download my CV to know more</h2>
-                <p>See more</p>
-                <button class="main_btn"><a href="#">Download CV</a></button>
-            </div>
-            <div class="main_img-container">
-                <div class="main_img-card" id="card-2"><i class="fas fa-users"></i></div>
-            </div>
+        <div class="main-bar">
+            <p><b>Goals</b></p>
+            <br>
+            <input id="gname" type="text" placeholder="Name"/>
+            <input id="gaccount" type="text" placeholder="Account"/>
+            <input id="gdate" type="date" type="text">
+            <button onclick="addGoal()">Add Goal</button>
+            <div id="goal-list"></div>
+            <br>
         </div>
-
     </div>
 
     <!-- income -->
     <div class="income" id="income">
-        <div class="main_container">
-            <div class="main_content">
-                <h1>Income? </h1>
-                <h2>Download my CV to know more</h2>
-                <p>See more</p>
-                <button class="main_btn"><a href="#">Download CV</a></button>
-            </div>
-            <div class="main_img-container">
-                <div class="main_img-card" id="card-2"><i class="fas fa-users"></i></div>
-            </div>
+        <div class="main-bar">
+            <p><b>Income</b></p>
+            <br>
+            <input id="iname" type="text" placeholder="Name"/>
+            <input id="iaccount" type="text" placeholder="Account"/>
+            <input id="idate" type="date" type="text">
+            <input id="iamount" type="text" placeholder="Amount"/>
+            <button onclick="addIncome()">Add Income</button>
+            <div id="income-list"></div>
+            <br>
         </div>
-
     </div>
+
     <!-- Expenses -->
     <div class="expense" id="expenses">
-
-        <div class="main_container">
-            <div class="main_content">
-                <h1>Expenses? </h1>
-                <h2>Download my CV to know more</h2>
-                <p>See more</p>
-                <button class="main_btn"><a href="#">Download CV</a></button>
-            </div>
-            <div class="main_img-container">
-                <div class="main_img-card" id="card-2"><i class="fas fa-users"></i></div>
-            </div>
+        <div class="main-bar">
+            <p><b>Expenses</b></p>
+            <br>
+            <input id="ename" type="text" placeholder="Name"/>
+            <input id="eaccount" type="text" placeholder="Account"/>
+            <input id="edate" type="date" type="text">
+            <input id="eamount" type="text" placeholder="Amount"/>
+            <button onclick="addExpense()">Add Expenses</button>
+            <div id="expenses-list"></div>
+            <br>
         </div>
     </div>
+
     <!-- investments -->
     <div class="investment" id="investments">
-        <div class="main_container">
-            <div class="main_content">
-                <h1>Investment? </h1>
-                <h2>Download my CV to know more</h2>
-                <p>See more</p>
-                <button class="main_btn"><a href="#">Download CV</a></button>
-            </div>
-            <div class="main_img-container">
-                <div class="main_img-card" id="card-2"><i class="fas fa-users"></i></div>
-            </div>
+        <div class="main-bar">
+            <p><b>Investments</b></p>
+            <br>
+            <input id="inv-name" type="text" placeholder="Investment Name"/>
+            <input id="inv-account" type="text" placeholder="Account"/>
+            <input id="inv-date" type="date" type="text">
+            <input id="inv-amount" type="text" placeholder="Amount"/>
+            <button onclick="addInvestment()">Add Investments</button>
+            <div id="investments-list"></div>
+            <br>
         </div>
-
     </div>
 
     <!-- Liabilities -->
     <div class="liability" id="liabilities">
-        <div class="main_container">
-            <div class="main_content">
-                <h1>Liability? </h1>
-                <h2>Download my CV to know more</h2>
-                <p>See more</p>
-                <button class="main_btn"><a href="#">Download CV</a></button>
-            </div>
-            <div class="main_img-container">
-                <div class="main_img-card" id="card-2"><i class="fas fa-users"></i></div>
-            </div>
+        <div class="main-bar">
+            <p><b>Liabilities</b></p>
+            <br>
+            <input id="lname" type="text" placeholder="Name"/>
+            <input id="laccount" type="text" placeholder="Account"/>
+            <input id="ldate" type="date" type="text">
+            <input id="lamount" type="text" placeholder="Amount"/>
+            <button onclick="addLiability()">Add Expenses</button>
+            <div id="liabilities-list"></div>
+            <br>
         </div>
-
     </div>
 
 
     <!-- footer section -->
     <div class="footer_container">
-        <div class="footer_links">
-            <div class="footer_link-wrapper">
-            </div>
-        </div>
         <div>
             <Section class="social_media">
                 <div class="social_media-wrap">
@@ -155,8 +143,6 @@
                         <a href="/" id="footer_logo"><img src="🦆 illustration _safe bank_.png" style="width: 30%;"></a>
                     </div>
                     <p class="website_rights">© Peninah 2022 All rights reserved</p>
-                    <div class="social_icons">
-                    </div>
                 </div>
             </Section>
         </div>
