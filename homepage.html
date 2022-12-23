@@ -61,74 +61,100 @@
 
     <!-- Goals -->
     <div class="goal" id="goals">
+        <br>
+        <h2>Goals </h2>
         <div class="main-bar">
-            <p><b>Goals</b></p>
             <br>
-            <input id="gname" type="text" placeholder="Name"/>
-            <input id="gaccount" type="text" placeholder="Account"/>
-            <input id="gdate" type="date" type="text">
-            <button onclick="addGoal()">Add Goal</button>
-            <div id="goal-list"></div>
+            <table class="headers">
+                <tr>
+                    <th><input id="gname" type="text" placeholder="Name"/> </th>
+                    <th><input id="gaccount" type="text" placeholder="Account"/></th>
+                    <th><input id="gdate" type="date" type="text"></th>
+                    <th><button onclick="addGoal()">Add Goal</button> </th>
+                    
+                </tr>
+            </table>
+            <table id="goal-list" class="g-table"></table>            
             <br>
         </div>
     </div>
 
     <!-- income -->
     <div class="income" id="income">
+        <br>
+        <h2>Income </h2>
         <div class="main-bar">
-            <p><b>Income</b></p>
             <br>
-            <input id="iname" type="text" placeholder="Name"/>
-            <input id="iaccount" type="text" placeholder="Account"/>
-            <input id="idate" type="date" type="text">
-            <input id="iamount" type="text" placeholder="Amount"/>
-            <button onclick="addIncome()">Add Income</button>
-            <div id="income-list"></div>
+            <table class="headers">
+                <tr>
+                    <th><input id="iname" type="text" placeholder="Name"/></th>
+                    <th><input id="iaccount" type="text" placeholder="Account"/></th>
+                    <th><input id="idate" type="date" type="text"></th>
+                    <th><input id="iamount" type="text" placeholder="Amount"/></th>
+                    <th><button onclick="addIncome()">Add Income</button> </th>
+                </tr>
+            </table>
+            <table id="income-list"></table>
             <br>
         </div>
     </div>
 
     <!-- Expenses -->
     <div class="expense" id="expenses">
+        <br>
+        <h2>Expenses </h2>
         <div class="main-bar">
-            <p><b>Expenses</b></p>
             <br>
-            <input id="ename" type="text" placeholder="Name"/>
-            <input id="eaccount" type="text" placeholder="Account"/>
-            <input id="edate" type="date" type="text">
-            <input id="eamount" type="text" placeholder="Amount"/>
-            <button onclick="addExpense()">Add Expenses</button>
-            <div id="expenses-list"></div>
+            <table class="headers">
+                <tr>
+                    <th><input id="ename" type="text" placeholder="Name"/></th>
+                    <th><input id="eaccount" type="text" placeholder="Account"/></th>
+                    <th><input id="edate" type="date" type="text"></th>
+                    <th><input id="eamount" type="text" placeholder="Amount"/></th>
+                    <th><button onclick="addExpense()">Add Expenses</button></th>
+                </tr>
+            </table>
+            <table id="expenses-list"></table>
             <br>
         </div>
     </div>
 
     <!-- investments -->
     <div class="investment" id="investments">
+        <br>
+        <h2>Investments</h2>
         <div class="main-bar">
-            <p><b>Investments</b></p>
             <br>
-            <input id="inv-name" type="text" placeholder="Investment Name"/>
-            <input id="inv-account" type="text" placeholder="Account"/>
-            <input id="inv-date" type="date" type="text">
-            <input id="inv-amount" type="text" placeholder="Amount"/>
-            <button onclick="addInvestment()">Add Investments</button>
-            <div id="investments-list"></div>
+            <table class="headers">
+                <tr>
+                    <th><input id="inv-name" type="text" placeholder="Investment Name"/></th>
+                    <th><input id="inv-account" type="text" placeholder="Account"/></th>
+                    <th><input id="inv-date" type="date" type="text"></th>
+                    <th><input id="inv-amount" type="text" placeholder="Amount"/></th>
+                    <th><button onclick="addInvestment()">Add Investments</button></th>
+                </tr>
+            </table>
+            <table id="investments-list"></table>
             <br>
         </div>
     </div>
 
     <!-- Liabilities -->
     <div class="liability" id="liabilities">
+        <br>
+        <h2>Liabilities</h2>
         <div class="main-bar">
-            <p><b>Liabilities</b></p>
             <br>
-            <input id="lname" type="text" placeholder="Name"/>
-            <input id="laccount" type="text" placeholder="Account"/>
-            <input id="ldate" type="date" type="text">
-            <input id="lamount" type="text" placeholder="Amount"/>
-            <button onclick="addLiability()">Add Liabilities</button>
-            <div id="liabilities-list"></div>
+            <table class="headers">
+                <tr>
+                    <th><input id="lname" type="text" placeholder="Name"/></th>
+                    <th><input id="laccount" type="text" placeholder="Account"/></th>
+                    <th><input id="ldate" type="date" type="text"></th>
+                    <th><input id="lamount" type="text" placeholder="Amount"/></th>
+                    <th><button onclick="addLiability()">Add Liabilities</button></th>
+                </tr>
+            </table>
+            <table id="liabilities-list"></table>
             <br>
         </div>
     </div>

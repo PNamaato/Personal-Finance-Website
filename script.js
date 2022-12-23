@@ -123,13 +123,13 @@ function goalRender(){
     document.getElementById('goal-list').innerHTML = '' 
 
     goals.forEach(goal => {
-        const element = document.createElement('div')
+        const element = document.createElement('tr')
+        element.setAttribute("class", "row")
+        
         element.innerHTML = `
-        <ul class = "row">
-            <li class = "col"> ${goal.name}</li>
-            <li class = "col"> ${goal.account}</li>
-            <li class = "col"> ${goal.goaldate}</li>
-        </ul>`
+            <td class = "col"> ${goal.name}</td>
+            <td class = "col"> ${goal.account}</td>
+            <td class = "col"> ${goal.goaldate}</td>`
 
 
         // element.innerText = goal.name + '  ----  ' + goal.account +'  ------  ' + goal.goaldate
@@ -137,7 +137,7 @@ function goalRender(){
         // add delete button for each element
         const deleteButton = document.createElement('button')
         deleteButton.innerText = 'Delete'
-        deleteButton.style = 'margin-left: 16px'
+        // deleteButton.style = 'margin-left: 16px'
         deleteButton.onclick = deleteGoal
         deleteButton.id = goal.id
         element.appendChild(deleteButton)
@@ -198,14 +198,22 @@ function incomeRender(){
     document.getElementById('income-list').innerHTML = '' 
 
     incomes.forEach(income => {
-        const element = document.createElement('div')
 
-        element.innerText = income.name + '  ----  ' + income.account +'  ------  ' + income.incomeDate + '-----'+ income.iamount
+        const element = document.createElement('tr')
+        element.setAttribute("class", "row")
+        
+        element.innerHTML = `
+            <td class = "col"> ${income.name}</td>
+            <td class = "col"> ${income.account}</td>
+            <td class = "col"> ${income.incomeDate}</td>
+            <td class = "col"> ${income.iamount}</td>`
+
+        // element.innerText = income.name + '  ----  ' + income.account +'  ------  ' + income.incomeDate + '-----'+ income.iamount
 
         // add delete button for each element
         const deleteButton = document.createElement('button')
         deleteButton.innerText = 'Delete'
-        deleteButton.style = 'margin-left: 16px'
+        // deleteButton.style = 'margin-left: 16px'
         deleteButton.onclick = deleteIncome
         deleteButton.id = income.id
         element.appendChild(deleteButton)
@@ -256,7 +264,7 @@ function createExpense(Name,Account,Duedate, Amount){
 
     expenses.push({name:Name,
     account: Account,
-    incomeDate: Duedate,
+    expenseDate: Duedate,
     eamount: Amount,
     id: id}) 
 }
@@ -267,14 +275,21 @@ function expenseRender(){
     document.getElementById('expenses-list').innerHTML = '' 
 
     expenses.forEach(expense => {
-        const element = document.createElement('div')
+        const element = document.createElement('tr')
+        element.setAttribute("class", "row")
+        
+        element.innerHTML = `
+            <td class = "col"> ${expense.name}</td>
+            <td class = "col"> ${expense.account}</td>
+            <td class = "col"> ${expense.expenseDate}</td>
+            <td class = "col"> ${expense.eamount}</td>`
 
-        element.innerText = expense.name + '  ----  ' + expense.account +'  ------  ' + expense.incomeDate + '-----'+ expense.eamount
+        // element.innerText = expense.name + '  ----  ' + expense.account +'  ------  ' + expense.incomeDate + '-----'+ expense.eamount
 
         // add delete button for each element
         const deleteButton = document.createElement('button')
         deleteButton.innerText = 'Delete'
-        deleteButton.style = 'margin-left: 16px'
+        // deleteButton.style = 'margin-left: 16px'
         deleteButton.onclick = deleteExpense
         deleteButton.id = expense.id
         element.appendChild(deleteButton)
@@ -325,7 +340,7 @@ function createInvestment(Name,Account,Duedate, Amount){
 
     investments.push({name:Name,
     account: Account,
-    incomeDate: Duedate,
+    investmentDate: Duedate,
     inAmount: Amount,
     id: id}) 
 }
@@ -336,14 +351,22 @@ function investmentRender(){
     document.getElementById('investments-list').innerHTML = '' 
 
     investments.forEach(investment => {
-        const element = document.createElement('div')
+        const element = document.createElement('tr')
+        element.setAttribute("class", "row")
+        
+        element.innerHTML = `
+            <td class = "col"> ${investment.name}</td>
+            <td class = "col"> ${investment.account}</td>
+            <td class = "col"> ${investment.investmentDate}</td>
+            <td class = "col"> ${investment.inAmount}</td>`
 
-        element.innerText = investment.name + '  ----  ' + investment.account +'  ------  ' + investment.incomeDate + '-----'+ investment.inAmount
+
+        // element.innerText = investment.name + '  ----  ' + investment.account +'  ------  ' + investment.incomeDate + '-----'+ investment.inAmount
 
         // add delete button for each element
         const deleteButton = document.createElement('button')
         deleteButton.innerText = 'Delete'
-        deleteButton.style = 'margin-left: 16px'
+        // deleteButton.style = 'margin-left: 16px'
         deleteButton.onclick = deleteInvestment
         deleteButton.id = investment.id
         element.appendChild(deleteButton)
@@ -394,8 +417,8 @@ function createLiability(Name,Account,Duedate, Amount){
 
     liabilities.push({name:Name,
     account: Account,
-    incomeDate: Duedate,
-    inAmount: Amount,
+    liabilityDate: Duedate,
+    lAmount: Amount,
     id: id}) 
 }
 
@@ -405,14 +428,22 @@ function liabilitiesRender(){
     document.getElementById('liabilities-list').innerHTML = '' 
 
     liabilities.forEach(liability => {
-        const element = document.createElement('div')
+        const element = document.createElement('tr')
+        element.setAttribute("class", "row")
+        
+        element.innerHTML = `
+            <td class = "col"> ${liability.name}</td>
+            <td class = "col"> ${liability.account}</td>
+            <td class = "col"> ${liability.liabilityDate}</td>
+            <td class = "col"> ${liability.lAmount}</td>`
 
-        element.innerText = liability.name + '  ----  ' + liability.account +'  ------  ' + liability.incomeDate + '-----'+ liability.inAmount
+
+        // element.innerText = liability.name + '  ----  ' + liability.account +'  ------  ' + liability.incomeDate + '-----'+ liability.inAmount
 
         // add delete button for each element
         const deleteButton = document.createElement('button')
         deleteButton.innerText = 'Delete'
-        deleteButton.style = 'margin-left: 16px'
+        // deleteButton.style = 'margin-left: 16px'
         deleteButton.onclick = deleteLiability
         deleteButton.id = liability.id
         element.appendChild(deleteButton)
