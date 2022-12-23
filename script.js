@@ -455,3 +455,28 @@ function liabilitiesRender(){
 liabilitiesRender()
 // =================================================================================================
 
+// pie chart
+var xValues = ["Liabilities", "Assests"];
+var yValues = [4000, 10000];
+var barColors = ["#67C587", "#EAF6ED"];
+new Chart ("card-2", {
+    type: "doughnut",
+    data: {
+        labels: xValues,
+        datasets:[{
+            backgroundColor: barColors,
+            data: yValues,
+            hoverOffset: 5
+        }]
+    },
+    options:{
+        title:{
+            display: true,
+            text: "Net Worth",
+            textposition: 'inside',
+        },
+        responsive: false,
+    }
+})
+
+// =============================================================
