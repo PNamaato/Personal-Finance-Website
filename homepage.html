@@ -76,7 +76,7 @@
         <h2>Goals </h2>
         <div class="main-bar">
             <br>
-            <table class="headers">
+            <!-- <table class="headers">
                 <tr>
                     <th><input id="gname" type="text" placeholder="Name"/> </th>
                     <th><input id="gaccount" type="text" placeholder="Account"/></th>
@@ -84,8 +84,22 @@
                     <th><button onclick="addGoal()">Add Goal</button> </th>
                     
                 </tr>
-            </table>
-            <table id="goal-list" class="g-table"></table>            
+            </table> -->
+            <table class="g-table">
+                <thead>
+                    <!-- <th>Name</th>
+                    <th>Account</th>
+                    <th>goal date</th>
+                    <th>button</th> -->
+                    <th><input id="gname" type="text" placeholder="Name"/> </th>
+                    <th><input id="gaccount" type="text" placeholder="Account"/></th>
+                    <th><input id="gdate" type="date" type="text"></th>
+                    <th><button onclick="addGoal()">Add Goal</button> </th>
+                </thead>
+                <tbody id="goal-list"></tbody>
+                    
+                </tbody>
+            </table>            
             <br>
         </div>
     </div>

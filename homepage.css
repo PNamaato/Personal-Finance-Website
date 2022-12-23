@@ -327,6 +327,7 @@ h2{
  .main-bar { 
   font-size: 14px;
   position: relative;
+  overflow-x: auto;
 }
 
 .main-bar input{
@@ -337,11 +338,13 @@ h2{
   appearance: none;
   background: #edd8d1;
   padding: 15px;
-  border-radius: 3px;
   width: 330px;
   font-size: 14px;
 }
 
+.main-bar input[date]{
+  padding: 1px;
+}
 .main-bar button{
   /* display: flex; */
     justify-content: center;
@@ -360,7 +363,7 @@ h2{
 
 .row {
   border: none;
-  background: #f5efed;
+  background: #a86a55;
   padding: 10px;
   border-radius: 3px;
   /* width: 330px; */
@@ -376,10 +379,16 @@ h2{
   -moz-appearance: none;
   appearance: none;
   padding: 15px;
-  border-radius: 3px;
   width: 330px;
   font-size: 14px;
+  background: #e8dedb;
+
 } 
+
+table {
+  width: 100%;
+  border-collapse:collapse;
+}
 
 
 

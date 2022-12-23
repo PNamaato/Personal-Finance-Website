@@ -60,11 +60,11 @@ navLogo.addEventListener('click', hideMobileMenu)
 // =======================================================================================================================================
 // Goals
 let goals = [{
-    name: 'Loans',
+    name: 'Loans1',
     account: 'Savings',
     goaldate: '2021-10-04',
     id: '1'},
-    {name: 'Loans',
+    {name: 'Loans2',
     account: 'Savings',
     goaldate: '2021-10-04',
     id: '2'},
@@ -72,7 +72,7 @@ let goals = [{
     account: 'Savings',
     goaldate: '2021-10-04',
     id: '3'},
-    {name: 'Loans',
+    {name: 'Loans3',
     account: 'Savings',
     goaldate: '2021-10-04',
     id: '4'}]
@@ -123,8 +123,15 @@ function goalRender(){
     document.getElementById('goal-list').innerHTML = '' 
 
     goals.forEach(goal => {
-        const element = document.createElement('tr')
-        element.setAttribute("class", "row")
+        const element = document.createElement("tr")
+        // var row = element.insertRow()
+        // var ncell = row.insertCell(0)
+        // var acell = row.insertCell(1)
+        // var gcell = row.insertCell(2)
+        // ncell.innerHTML = goal.name
+        // acell.innerHTML = goal.account
+        // gcell.innerHTML = goal.goaldate
+        // element.setAttribute("class", "row")
         
         element.innerHTML = `
             <td class = "col"> ${goal.name}</td>
@@ -132,7 +139,7 @@ function goalRender(){
             <td class = "col"> ${goal.goaldate}</td>`
 
 
-        // element.innerText = goal.name + '  ----  ' + goal.account +'  ------  ' + goal.goaldate
+        // // element.innerText = goal.name + '  ----  ' + goal.account +'  ------  ' + goal.goaldate
 
         // add delete button for each element
         const deleteButton = document.createElement('button')
