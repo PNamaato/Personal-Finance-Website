@@ -74,27 +74,30 @@
     <div class="goal" id="goals">
         <br>
         <h2>Goals </h2>
+
+        <!-- Create pop up -->
+        <!-- button to open popup -->
+        <button class="open-button" onclick="openFormGoal()">Add Goal</button>
+        <!-- the hidden form -->
+        <div class="popup" id="goal-form">
+            <form>
+                 <input id="gname" type="text" placeholder="Name"/>
+                <input id="gaccount" type="text" placeholder="Account"/>
+                <input id="gdate" type="date" type="text">
+                <button onclick="addGoal()" class="submit">Add Goal</button>
+                <button onclick="closeFormGoal()" class="cancel">Cancel</button>
+            </form>
+           
+        </div>
+
         <div class="main-bar">
             <br>
-            <!-- <table class="headers">
-                <tr>
-                    <th><input id="gname" type="text" placeholder="Name"/> </th>
-                    <th><input id="gaccount" type="text" placeholder="Account"/></th>
-                    <th><input id="gdate" type="date" type="text"></th>
-                    <th><button onclick="addGoal()">Add Goal</button> </th>
-                    
-                </tr>
-            </table> -->
             <table class="g-table">
                 <thead>
-                    <!-- <th>Name</th>
+                    <th>Name</th>
                     <th>Account</th>
-                    <th>goal date</th>
-                    <th>button</th> -->
-                    <th><input id="gname" type="text" placeholder="Name"/> </th>
-                    <th><input id="gaccount" type="text" placeholder="Account"/></th>
-                    <th><input id="gdate" type="date" type="text"></th>
-                    <th><button onclick="addGoal()">Add Goal</button> </th>
+                    <th>Goal Date</th>
+                    <th>Progress</th>
                 </thead>
                 <tbody id="goal-list"></tbody>
                     
@@ -108,18 +111,32 @@
     <div class="income" id="income">
         <br>
         <h2>Income </h2>
+
+        <button class="open-button" onclick="openFormIncome()">Add Income</button>
+        <!-- the hidden form -->
+        <div class="popup" id="income-form">
+            <form >
+                <input id="iname" type="text" placeholder="Name"/>
+                <input id="iaccount" type="text" placeholder="Account"/>
+                <input id="idate" type="date" type="text">
+                <input id="iamount" type="text" placeholder="Amount"/>
+                <button onclick="addIncome()" class="submit">Add Income</button>
+                <button onclick="closeFormIncome()" class="cancel">Cancel</button>
+            </form>
+            
+        </div>
+
         <div class="main-bar">
             <br>
-            <table class="headers">
-                <tr>
-                    <th><input id="iname" type="text" placeholder="Name"/></th>
-                    <th><input id="iaccount" type="text" placeholder="Account"/></th>
-                    <th><input id="idate" type="date" type="text"></th>
-                    <th><input id="iamount" type="text" placeholder="Amount"/></th>
-                    <th><button onclick="addIncome()">Add Income</button> </th>
-                </tr>
+            <table class="in-table">
+                <thead>
+                    <th>Name</th>
+                    <th>Account</th>
+                    <th>Income Date</th>
+                    <th>Amount</th>
+                </thead>
+                <tbody id="income-list"></tbody>
             </table>
-            <table id="income-list"></table>
             <br>
         </div>
     </div>
@@ -128,18 +145,31 @@
     <div class="expense" id="expenses">
         <br>
         <h2>Expenses </h2>
+
+        <button class="open-button" onclick="openFormExpense()">Add Expense</button>
+        <div class="popup" id="expense-form">
+            <form>
+                <input id="ename" type="text" placeholder="Name"/>
+                <input id="eaccount" type="text" placeholder="Account"/>
+                <input id="edate" type="date" type="text">
+                <input id="eamount" type="text" placeholder="Amount"/>
+                <button onclick="addExpense()" class="submit">Add Expenses</button>
+                <button onclick="closeFormExpense()" class="cancel">Cancel</button>
+            </form>
+            
+        </div>
+
         <div class="main-bar">
             <br>
-            <table class="headers">
-                <tr>
-                    <th><input id="ename" type="text" placeholder="Name"/></th>
-                    <th><input id="eaccount" type="text" placeholder="Account"/></th>
-                    <th><input id="edate" type="date" type="text"></th>
-                    <th><input id="eamount" type="text" placeholder="Amount"/></th>
-                    <th><button onclick="addExpense()">Add Expenses</button></th>
-                </tr>
+            <table class="exp-table">
+                <thead>
+                    <th>Name</th>
+                    <th>Account</th>
+                    <th>Expense Date</th>
+                    <th>Amount</th>
+                </thead>
+                <tbody id="expenses-list"></tbody>
             </table>
-            <table id="expenses-list"></table>
             <br>
         </div>
     </div>
@@ -148,18 +178,30 @@
     <div class="investment" id="investments">
         <br>
         <h2>Investments</h2>
+
+        <button class="open-button" onclick="openFormInvest()">Add Investment</button>
+        <div class="popup" id="investment-form">
+            <form>
+                <input id="inv-name" type="text" placeholder="Investment Name"/>
+                <input id="inv-account" type="text" placeholder="Account"/>
+                <input id="inv-date" type="date" type="text">
+                <input id="inv-amount" type="text" placeholder="Amount"/>
+                <button onclick="addInvestment()" class="submit">Add Investments</button>
+                <button onclick="closeFormInvest()" class="cancel">Cancel</button>
+            </form>
+        </div>
+
         <div class="main-bar">
             <br>
-            <table class="headers">
-                <tr>
-                    <th><input id="inv-name" type="text" placeholder="Investment Name"/></th>
-                    <th><input id="inv-account" type="text" placeholder="Account"/></th>
-                    <th><input id="inv-date" type="date" type="text"></th>
-                    <th><input id="inv-amount" type="text" placeholder="Amount"/></th>
-                    <th><button onclick="addInvestment()">Add Investments</button></th>
-                </tr>
+            <table class="investment-table">
+                <thead>
+                    <th>Name</th>
+                    <th>Account</th>
+                    <th>Investment Date</th>
+                    <th>Amount</th>
+                </thead>
+                <tbody id="investments-list"></tbody>
             </table>
-            <table id="investments-list"></table>
             <br>
         </div>
     </div>
@@ -168,18 +210,30 @@
     <div class="liability" id="liabilities">
         <br>
         <h2>Liabilities</h2>
+
+        <button class="open-button" onclick="openFormLiability()">Add liability</button>
+        <div class="popup" id="liability-form">
+           <form>
+            <input id="lname" type="text" placeholder="Name"/>
+            <input id="laccount" type="text" placeholder="Account"/>
+            <input id="ldate" type="date" type="text">
+            <input id="lamount" type="text" placeholder="Amount"/>
+            <button onclick="addLiability()" class="submit">Add Liabilities</button>
+            <button onclick="closeFormLiability()" class="cancel">Cancel</button>
+           </form>
+        </div>
+
         <div class="main-bar">
             <br>
-            <table class="headers">
-                <tr>
-                    <th><input id="lname" type="text" placeholder="Name"/></th>
-                    <th><input id="laccount" type="text" placeholder="Account"/></th>
-                    <th><input id="ldate" type="date" type="text"></th>
-                    <th><input id="lamount" type="text" placeholder="Amount"/></th>
-                    <th><button onclick="addLiability()">Add Liabilities</button></th>
-                </tr>
+            <table class="liability-table">
+                <thead>
+                    <th>Name</th>
+                    <th>Account</th>
+                    <th>Liabilities Date</th>
+                    <th>Amount</th>
+                </thead>
+                <tbody id="liabilities-list"></tbody>
             </table>
-            <table id="liabilities-list"></table>
             <br>
         </div>
     </div>

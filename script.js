@@ -57,6 +57,79 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu)
 navLogo.addEventListener('click', hideMobileMenu)
+
+// pop up menu for adding to tables
+// goal
+function openFormGoal(){
+    var element = document.getElementById("goal-form")
+    element.style.display = "block";
+    element.getElementsByClassName("submit")[0].addEventListener ("click", 
+    (e) => {
+      e.preventDefault();
+    })
+}
+function closeFormGoal(){
+    document.getElementById("goal-form").style.display = "none";
+}
+// income
+function openFormIncome(){
+    var element = document.getElementById("income-form")
+    element.style.display = "block";
+    element.getElementsByClassName("submit")[0].addEventListener ("click", 
+    (e) => {
+      e.preventDefault();
+    })
+}
+function closeFormIncome(){
+    document.getElementById("income-form").style.display = "none";
+}
+
+// expense
+function openFormExpense(){
+    var element = document.getElementById("expense-form")
+    element.style.display = "block"
+    element.getElementsByClassName("submit")[0].addEventListener ("click", 
+    (e) => {
+      e.preventDefault();
+    })
+}
+function closeFormExpense(){
+    document.getElementById("expense-form").style.display = "none";
+}
+
+// investments
+function openFormInvest(){
+    var element = document.getElementById("investment-form")
+    element.style.display = "block";
+    element.getElementsByClassName("submit")[0].addEventListener ("click", 
+    (e) => {
+      e.preventDefault();
+    })
+}
+function closeFormInvest(){
+    document.getElementById("investment-form").style.display = "none";
+}
+
+// liabilities
+function openFormLiability(){
+    var element = document.getElementById("liability-form")
+    element.style.display = "block";
+    element.getElementsByClassName("submit")[0].addEventListener ("click", 
+    (e) => {
+      e.preventDefault();
+    })
+}
+
+function closeFormLiability(){
+    document.getElementById("liability-form").style.display = "none";
+}
+
+
+document.querySelector(".cancel").addEventListener("click", 
+function(e){
+  e.preventDefault();
+})
+
 // =======================================================================================================================================
 // Goals
 let goals = [{
@@ -97,6 +170,10 @@ function addGoal(){
     console.log(account)
     createGoal(name,account,duedate)
     goalRender()
+    closeFormGoal()
+    document.getElementById("gname").value = ""
+    document.getElementById("gaccount").value= ""
+    document.getElementById('gdate').value = ""
 }
 
 function deleteGoal(event){
@@ -178,6 +255,11 @@ function addIncome(){
     const duedate = document.getElementById('idate').value
     createIncome(name,account,duedate,amount)
     incomeRender()
+    closeFormIncome()
+    document.getElementById("iname").value = ""
+    document.getElementById("iaccount").value = ""
+    document.getElementById("iamount").value = ""
+    document.getElementById('idate').value = ""
 }
 
 function deleteIncome(event){
@@ -207,7 +289,6 @@ function incomeRender(){
     incomes.forEach(income => {
 
         const element = document.createElement('tr')
-        element.setAttribute("class", "row")
         
         element.innerHTML = `
             <td class = "col"> ${income.name}</td>
@@ -255,6 +336,12 @@ function addExpense(){
     const duedate = document.getElementById('edate').value
     createExpense(name,account,duedate,amount)
     expenseRender()
+    closeFormExpense()
+    document.getElementById("ename").value = ""
+    document.getElementById("eaccount").value = ""
+    document.getElementById("eamount").value = ""
+    document.getElementById('edate').value = ""
+
 }
 
 function deleteExpense(event){
@@ -283,7 +370,7 @@ function expenseRender(){
 
     expenses.forEach(expense => {
         const element = document.createElement('tr')
-        element.setAttribute("class", "row")
+        // element.setAttribute("class", "row")
         
         element.innerHTML = `
             <td class = "col"> ${expense.name}</td>
@@ -331,6 +418,12 @@ function addInvestment(){
     const duedate = document.getElementById('inv-date').value
     createInvestment(name,account,duedate,amount)
     investmentRender()
+    closeFormInvest()
+    document.getElementById("inv-name").value = ""
+    document.getElementById("inv-account").value = ""
+    document.getElementById("inv-amount").value = ""
+    document.getElementById('inv-date').value = ""
+
 }
 
 function deleteInvestment(event){
@@ -359,7 +452,7 @@ function investmentRender(){
 
     investments.forEach(investment => {
         const element = document.createElement('tr')
-        element.setAttribute("class", "row")
+        // element.setAttribute("class", "row")
         
         element.innerHTML = `
             <td class = "col"> ${investment.name}</td>
@@ -408,6 +501,12 @@ function addLiability(){
     const duedate = document.getElementById('ldate').value
     createLiability(name,account,duedate,amount)
     liabilitiesRender()
+    closeFormLiability()
+    document.getElementById("lname").value = ""
+    document.getElementById("laccount").value = ""
+    document.getElementById("lamount").value = ""
+    document.getElementById('ldate').value = ""
+
 }
 
 function deleteLiability(event){
@@ -436,7 +535,7 @@ function liabilitiesRender(){
 
     liabilities.forEach(liability => {
         const element = document.createElement('tr')
-        element.setAttribute("class", "row")
+        // element.setAttribute("class", "row")
         
         element.innerHTML = `
             <td class = "col"> ${liability.name}</td>
