@@ -1,0 +1,5 @@
+peninahpaula - bpkZSKxYCBPWcrD3
+
+// Delete a game and its associated quests
+db.games.deleteOne({ _id: ObjectId("60f950794a61939b6aac12a4") });
+db.quests.deleteMany({ gameId: 'abcd-wxyz' });

@@ -1,1 +1,1 @@
-# Personal-Finance-Website
+To run app: streamlit run app/main.py
